@@ -1,0 +1,97 @@
+
+        /* Estilos básicos para centrar el formulario en la pantalla */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #11141a; /* Fondo oscuro elegante como el del video */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contenedor-login {
+            background-color: #1a1f29;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Estrellas decorativas superiores */
+        .estrellas {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p.subtitulo {
+            color: #8a94a6;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        /* Caja de entrada de texto (Input) */
+        .campo-entrada {
+            width: 100%;
+            padding: 14px 20px;
+            background-color: #252c3b;
+            border: 1px solid #364054;
+            border-radius: 25px; /* Bordes bien redondeados */
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .campo-entrada::placeholder {
+            color: #637085;
+        }
+
+        /* Botón Continuar */
+        .boton-continuar {
+            width: 100%;
+            padding: 14px;
+            background-color: #1b49db; /* Color azul del video */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .boton-continuar:hover {
+            background-color: #1539b3;
+        }
+
+        /* Enlace para regresar a la tienda */
+        .volver-tienda {
+            display: inline-block;
+            margin-top: 25px;
+            color: #8a94a6;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .volver-tienda:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+  
