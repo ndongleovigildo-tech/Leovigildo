@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centrar la ventana en la pantalla */
+body {
+    /* Usamos un fondo oscuro con un degradado para probar cómo se transparenta el cristal */
+    background: linear-gradient(135deg, #111625, #1a2035); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 1. TODA LA VENTANA AHORA ES CRISTALINA */
+.ventana-registro {
+    /* Fondo blanco ultra transparente (solo 10% de opacidad) */
+    background-color: rgba(255, 255, 255, 0.1); 
+    
+    /* El truco mágico: hace borroso el fondo de la pantalla que está detrás */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Para que funcione en Safari/iPhone */
+    
+    /* Un borde blanco muy delgadito que imita el filo del vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px; /* Bordes un poco más redondeados para suavizar el cristal */
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* 2. LA BARRA SUPERIOR (También de cristal, pero un poco más oscura) */
+.barra-superior {
+    /* Mantenemos el tono rojizo/marrón original pero con transparencia (30% de opacidad) */
+    background-color: rgba(139, 62, 47, 0.3); 
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria fina */
+}
+
+.barra-superior h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.boton-cerrar {
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* CUERPO DEL FORMULARIO */
+.formulario-cuerpo {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fila-doble {
+    display: flex;
+    gap: 20px;
+}
+
+.fila-doble .grupo-campo {
+    flex: 1;
+}
+
+/* 3. LAS ETIQUETAS (TEXTOS) EN BLANCO */
+/* Como la caja ahora es transparente, cambiamos el texto a blanco para que se lea perfecto */
+.grupo-campo label {
+    color: #ffffff; 
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra al texto para mejorar lectura */
+}
+
+/* 4. CAJAS DE ENTRADA (INPUTS) ESTILO INTERFAZ OSCURA */
+.grupo-campo input {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.07); /* Casi invisibles */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #ffffff; /* Texto que escribe el usuario en blanco */
+    outline: none;
+    transition: all 0.3s;
+}
+
+/* Cuando el usuario hace clic para escribir, la caja brilla */
+.grupo-campo input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Color del texto de sugerencia interno */
+.grupo-campo input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* 5. EL BOTÓN AHORA TAMBIÉN ES DE CRISTAL */
+.boton-registrate {
+    /* Fondo azul original pero con transparencia (25% de opacidad) */
+    background-color: rgba(43, 108, 176, 0.25); 
+    color: #ffffff;
+    
+    /* Efecto cristal propio para el botón */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Al pasar el mouse por encima del botón */
+.boton-registrate:hover {
+    background-color: rgba(43, 108, 176, 0.5); /* Se vuelve más sólido */
+    border-color: rgba(255, 255, 255, 0.6);   /* El borde brilla más */
+    transform: translateY(-2px);               /* Sube un poquito */
+}
