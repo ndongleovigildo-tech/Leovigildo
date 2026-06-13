@@ -141,3 +141,4 @@ body {
     background-color: rgba(43, 108, 176, 0.5); /* Se vuelve más sólido */
     border-color: rgba(255, 255, 255, 0.6);   /* El borde brilla más */
     transform: translateY(-2px);               /* Sube un poquito */
+}
